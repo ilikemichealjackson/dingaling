@@ -432,8 +432,8 @@ function toggleStar(event, star) {
    *
    * @return {void}
    */
-  function makecloak(replaceUrl = preferences.cloakUrl) {
-      if (window.top.location.href !== 'about:blank') {
+  function BROKEN(replaceUrl = preferences.cloakUrl) {
+      if (window.top.location.href !== 'Blah') {
           var url = window.location.href;
           const win = window.open();
           if (!win || win.closed || typeof win.closed == 'undefined') {
@@ -741,10 +741,10 @@ function randomGame() {
 
 const preferencesDefaults = {
     cloak: true,
-    cloakUrl: 'https://classroom.google.com',
+    cloakUrl: 'epicname.vercel.app',
     mask: true,
     maskTitle: 'Home',
-    maskIconUrl: 'https://ssl.gstatic.com/classroom/ic_product_classroom_32.png',
+    maskIconUrl: 'epicname.vercel.app',
     background: true,
 };
 
@@ -752,9 +752,7 @@ if (localStorage.getItem('preferences') == null) {
     localStorage.setItem('preferences', JSON.stringify(preferencesDefaults));
 }
 const preferences = JSON.parse(localStorage.getItem('preferences'));
-const cloakCheckbox = document.getElementById('cloakCheckboxInput');
 const backgroundCheckbox = document.getElementById('backgroundCheckboxInput');
-const cloakUrl = document.getElementById('cloakUrlInput');
 const maskCheckbox = document.getElementById('maskCheckboxInput');
 const maskTitle = document.getElementById('maskTitleInput');
 const maskIcon = document.getElementById('maskIconInput');
